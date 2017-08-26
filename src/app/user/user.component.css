@@ -1,0 +1,23 @@
+.profile{
+    width:1000px;
+    height: 200px;
+    margin: 0 auto;
+    color: #FFFFFF;
+    background: rgb(35, 48, 102);
+    line-height: 1.5em;
+}
+.user-detail{
+    margin:0px 25px;
+}
+.left{
+    width: 150px;
+    height: 150px;
+    float: left;
+    background: green;
+}
+.middle{
+    float: left;
+}
+.right{
+    float: right;
+}

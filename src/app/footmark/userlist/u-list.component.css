@@ -1,0 +1,22 @@
+.list-container{
+    height: 600px;
+    border: 1px solid red;
+    background: rgb(133, 231, 89);
+}
+.user-list{
+    
+    font-size: 25px;
+    width: 100px;
+    text-align: center;
+}
+.user-list li{
+    margin:0.5em 0.2em;
+    height: 40px;
+    line-height: 40px;
+    color: rgb(255, 255, 255);
+    background: rgb(93, 92, 107);
+    border-radius: 5px;
+}
+.user-list li:hover{
+    cursor: pointer;
+}

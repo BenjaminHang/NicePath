@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="nav">
+  <div class="nav-left">
+      {{title}}
+  </div>
+  <div>
+    <ul class="nav-middle">
+      <li><a routerLink='/rootmark'>足迹</a></li>
+      <li><a routerLink='/community'>社区</a></li>
+      <li><a [routerLink]="['/profile',1]">个人主页</a></li>
+    </ul>
+    <ul *ngIf="true" class="nav-right">
+      <li><a routerLink='/login'>Login</a></li>
+    </ul>
+    <ul *ngIf="flase" class="nav-rigth">
+      <li><a [routerLink]="['/profile',id]">user-name</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+

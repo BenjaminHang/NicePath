@@ -1,0 +1,5 @@
+.display-board{
+    width: 250px;
+    height: 600px;
+    border: 1px solid red;
+}

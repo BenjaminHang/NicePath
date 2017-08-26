@@ -1,0 +1,18 @@
+.left{
+    float: left;
+    margin-right: 10px;
+}
+.middle{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clearf:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+.bottom{
+    margin-top: 20px;
+}

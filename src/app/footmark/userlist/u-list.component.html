@@ -1,0 +1,6 @@
+<div class="list-container">
+    <ul class="user-list">
+        <li *ngFor="let user of users" (click)="gotoProfile(user)">{{user.name}}</li>
+    </ul>
+</div>
+
