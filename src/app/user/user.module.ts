@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { UserComponent } from './user.component';
+import { UserService } from '../user.service';
 
 
 @NgModule({
@@ -12,8 +13,8 @@ import { UserComponent } from './user.component';
     BrowserModule
   ],
   exports: [
-      
+      UserComponent
   ],
-  providers: [],
+  providers: [UserService],
 })
 export class UserModule { }

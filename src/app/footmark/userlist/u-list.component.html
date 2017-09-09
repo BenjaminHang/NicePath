@@ -1,6 +1,13 @@
 <div class="list-container">
-    <ul class="user-list">
-        <li *ngFor="let user of users" (click)="gotoProfile(user)">{{user.name}}</li>
-    </ul>
+    <div>
+        <ul class="user-list">
+            <li *ngFor="let user of userService.users.slice((userService.uPage-1)*10,userService.uPage*10)" (click)="changeUser(user)" [class.selected]="user === userService.selectedUser">{{user.name}}</li>
+        </ul>
+    </div>
+    <div class="users-selected">
+        <div class="arrow">{{arrow[0]}}</div>
+        <div class="pages">
+            <input [(ngModel)]="page" (change)="changeList(page)" class="page"/>/ {{total_pages}}</div>
+        <div class="arrow">{{arrow[1]}}</div>
+    </div>
 </div>
-

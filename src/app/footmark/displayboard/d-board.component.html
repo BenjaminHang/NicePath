@@ -1,1 +1,17 @@
-<div class="display-board"></div>
+<div class="display-board">
+    <div *ngIf = "userService.selectNone">
+        <p><span>{{userService.selectedUser.name}}</span>的足迹已遍布全国<span>{{userService.uProvinces.length}}</span>个省、自治区、直辖市，<span>{{userService.uCitys.length}}</span>个城市。</p>
+        <div class="img">
+            <!-- <img [src]="zhengzhou.jpg" alt=""> -->
+        </div>
+    </div>
+    <div *ngFor = "let travel of userService.selectedTravels">
+        <div *ngIf = "travel" class="content">
+            <h3><span>{{travel.location[0]}}</span>
+            -
+            <span>{{travel.location[1]}}</span></h3>
+            <p>{{travel.content}}</p>
+            <button>详情 &raquo;</button>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 <div class="footmark-map">
-    <svg style="border-style:solid;border-width:2px;" height="520px" width="630px">
+  <svg style="border-style:solid;border-width:2px;" height="520px" width="630px">
         <polygon
         id="_39118320"
         style="fill: none; stroke: rgb(255, 255, 255); stroke-opacity: 1; stroke-width: 0.731572; stroke-miterlimit: 4; stroke-dasharray: none;"
@@ -283,5 +283,35 @@
               id="g4806"
               style="fill: rgb(179, 180, 193); fill-opacity: 1; stroke: none; stroke-width: 0.8; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
               transform="translate(-912.403, -226.957)" /></g></g></g>
-    </svg>
+    
+    
+              <defs>  
+                <marker id="arrow"   
+                        markerUnits="strokeWidth"   
+                        markerWidth="12"   
+                        markerHeight="12"   
+                        viewBox="0 0 12 12"   
+                        refX="12"   
+                        refY="6"   
+                        orient="auto">  
+                        <path d="M2,2 L10,6 L2,10 L6,6 L2,2" style="fill: rgba(200,10,50,1.0);" />  
+                </marker>  
+                </defs> 
+  <svg *ngFor=  "let travel of userService.selectedTravels">
+    <a *ngIf = "travel" [attr.xlink:href]=''>
+    <line  [attr.x1]="getCoordinate(travel.location[0])[0]" [attr.y1]="getCoordinate(travel.location[0])[1]" [attr.x2]="getCoordinate(travel.location[1])[0]" [attr.y2]="getCoordinate(travel.location[1])[1]"  stroke="red" stroke-width="2"  marker-end="url(#arrow)"/> 
+    </a>
+
+  </svg>    
+  
+  <!-- <svg *ngFor = "let travel of userService.selectedUser.travels"> -->
+    <!-- <svg *ngFor = "let location of travel.location" > -->
+  <circle *ngFor = "let city of userService.uCitys" (Init)="initCity(city)"  [attr.cx]="getCoordinate(city)[0]" [attr.cy]="getCoordinate(city)[1]" r="5" [attr.fill]="userService.selectedCitys[userService.uCitys.indexOf(city)] != 0 ? 'blue':'rgba(216, 183, 27, 1.0)'"/> 
+     <!-- <line x1="200" y1="50" x2="100" y2="100"  stroke="red" stroke-width="2"  marker-end="url(#arrow)"/>  -->
+     <!-- *ngIf ="citys.indexOf(location)==-1"  -->
+    <!-- </svg> -->
+  <!-- </svg> -->
+  </svg>
+  <!-- <div *ngFor = "let travel of travels">{{travel.location}}</div> -->
+      
 </div>

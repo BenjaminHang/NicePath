@@ -7,17 +7,20 @@
     line-height: 1.5em;
 }
 .user-detail{
-    margin:0px 25px;
+    display: flex;
 }
 .left{
+    margin: 25px;
     width: 150px;
     height: 150px;
     float: left;
     background: green;
 }
 .middle{
-    float: left;
+    margin-top: 25px;
+    width: 500px;
 }
 .right{
-    float: right;
+    margin:25px;
+    width: 250px;
 }

@@ -38,6 +38,7 @@ a{
     overflow: hidden;
 }
 a:focus{
-    color: rgb(2, 7, 133);
-    font-weight: bold;
+    color: rgb(0, 6, 133);
+    font-weight: bold;   
 }
+

@@ -1,2 +1,14 @@
+
 <div class="timeline">
-</div>
+    <div class="timeline-line"></div>
+    <div *ngIf="userService.tPage!=1" (click)="changePosition('left')" class="timeline-line-arrow left">&lt;</div>
+    <div *ngIf="userService.tPage!=userService.tEndPage" (click)="changePosition('right')" class="timeline-line-arrow right">&gt;</div>
+    <div class="timeline-content">
+        <div class="travel" *ngFor = "let travel of userService.selectedUser.travels.slice((userService.tPage-1)*7,userService.tPage*7)">
+            <button  (click)="selectTravel(travel)" [class.selected]="userService.selectOrNot[userService.selectedUser.travels.indexOf(travel)]"></button>
+            <span>{{travel.time}}</span><br>
+            <span>{{travel.location[1]}}</span>
+        </div>
+        <!-- <button *ngFor = "let travel of userService.selectedUser.travels" (click)="changeTravel(travel)">{{travel.time}}</button> -->
+    </div>
+    </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { UserListComponent } from './userlist/u-list.component';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-footmark',
@@ -9,7 +10,11 @@ import { UserListComponent } from './userlist/u-list.component';
 })
 export class FootmarkComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private userService:UserService,
+  ) {
+    this.userService.changeUPage(1)
+   }
 
   ngOnInit() {
   }
