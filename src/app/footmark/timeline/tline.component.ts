@@ -10,6 +10,9 @@ import { UserService } from '../../user.service';
 export class TimelineComponent implements OnInit {
   // travels = this.userService.selectedUser.travels
   // selectedTravel = this.userService.selectedTravel
+
+p = this.userService.p
+
   constructor(
       private router:Router,
       private userService:UserService,

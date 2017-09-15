@@ -9,7 +9,7 @@ import { UserListComponent } from './userlist/u-list.component';
 import { FootmarkMapComponent } from './footmarkmap/f-map.component';
 import { DisplayBoardComponent } from './displayboard/d-board.component';
 import { TimelineComponent } from './timeline/tline.component';
-import { AppRoutingModule } from '../app-routing.module';
+import { OTimelineComponent } from './onetimeline/otline.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +18,11 @@ import { AppRoutingModule } from '../app-routing.module';
     FootmarkMapComponent,
     DisplayBoardComponent,
     TimelineComponent,
+    OTimelineComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
   ],
   exports: [
     FootmarkComponent,

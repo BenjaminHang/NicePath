@@ -1,0 +1,20 @@
+
+<div id="timeline" class="timeline" (mouseover)="drag()">
+    <div class="timeline-line"></div>
+    <!-- <div *ngIf="userService.tPage!=1" (click)="changePosition('left')" class="timeline-line-arrow left">&lt;</div>
+    <div *ngIf="userService.tPage!=userService.tEndPage" (click)="changePosition('right')" class="timeline-line-arrow right">&gt;</div> -->
+    <div id = "tlc" class="timeline-content">
+        <div class="travel" *ngFor = "let travel of travels"   (click)="selectTravel(travel)" >
+            <button [class.selected]="userService.selectOrNot[userService.selectedUser.travels.indexOf(travel)]"></button>
+            <span>{{travel.time}}</span><br>
+            <span>{{travel.location[1]}}</span>
+        </div>
+        <!-- <button *ngFor = "let travel of userService.selectedUser.travels" (click)="changeTravel(travel)">{{travel.time}}</button> -->
+    </div>
+    <!-- <div [ngSwitch]="5">
+<dd *ngSwitchCase="5">k</dd>
+<dd *ngSwitchCase="5">h</dd>
+<div *ngSwitchCase="6">d</div>
+<div *ngSwitchDefault>hhh</div>
+</div> -->
+    </div>
