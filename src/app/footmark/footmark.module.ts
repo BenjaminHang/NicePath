@@ -7,6 +7,7 @@ import { UserService } from '../user.service';
 import { FootmarkComponent } from './footmark.component';
 import { UserListComponent } from './userlist/u-list.component';
 import { FootmarkMapComponent } from './footmarkmap/f-map.component';
+import { RFootmarkMapComponent } from './rfootmarkmap/rf-map.component';
 import { DisplayBoardComponent } from './displayboard/d-board.component';
 import { TimelineComponent } from './timeline/tline.component';
 import { OTimelineComponent } from './onetimeline/otline.component';
@@ -19,6 +20,7 @@ import { OTimelineComponent } from './onetimeline/otline.component';
     DisplayBoardComponent,
     TimelineComponent,
     OTimelineComponent,
+    RFootmarkMapComponent,
   ],
   imports: [
     BrowserModule,
